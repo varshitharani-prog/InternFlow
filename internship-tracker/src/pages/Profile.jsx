@@ -234,9 +234,7 @@ function Profile() {
           Save Profile
         </button>
       </form>
-      
-
-      
+  
     </div>
   );
 }

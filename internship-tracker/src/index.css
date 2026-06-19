@@ -34,7 +34,7 @@ body{
 }
 
 
-/*HOME*/
+/* HOME */
 
 .home {
   width: 100%;
@@ -134,7 +134,7 @@ body{
 
 
 
-/*NAVBAR*/
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -189,12 +189,12 @@ body{
 
 @media (max-width: 768px) {
 
-  /* hide desktop links */
+  
   .desktop {
     display: none;
   }
 
-  /* show hamburger */
+ 
   .hamburger {
     display: block;
   }
@@ -247,7 +247,7 @@ body{
 }
 
 
-/*FOOTER*/
+/* FOOTER */
 
 .footer {
   width: 100%;
@@ -293,7 +293,7 @@ body{
   }
 }
 
-/*DASHBOARD*/
+/* DASHBOARD */
 .dashboard {
   max-width: 1200px;
   margin: auto;
@@ -439,15 +439,14 @@ body{
   border-radius: 16px;
 
   width: 100%;
-  max-width: 700px;   /* 🔥 gives good desktop size */
+  max-width: 700px;   
   margin-left: auto;
   margin-right: auto;
 }
 
 .chart-wrapper {
   width: 100%;
-  height: 320px;   /* 🔥 main fix for “too small” issue */
-
+  height: 320px;   
   display: flex;
   justify-content: center;
   align-items: center;
@@ -455,7 +454,7 @@ body{
 
 @media (max-width: 768px) {
   .chart-wrapper {
-    height: 260px;  /* slightly smaller for mobile */
+    height: 260px;  
   }
 
   .analytics-chart-card {
@@ -482,15 +481,15 @@ body{
 }
 
 
-/*APPLICATION*/
-/* PAGE */
+/* APPLICATION */
+
 .app-container {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
 }
 
-/* HEADERS */
+
 .applications-header,
 .list-header {
   color: white;
@@ -534,7 +533,7 @@ body{
   margin-bottom: 12px;
 }
 
-/* ADD BUTTON */
+
 .add {
   background: #22c55e;
   color: white;
@@ -548,7 +547,7 @@ body{
   background: #16a34a;
 }
 
-/* APPLICATION CARD */
+
 .card {
   background: white;
   border-radius: 10px;
@@ -593,7 +592,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* STATUS BADGES */
+
 .status {
   padding: 5px 10px;
   border-radius: 20px;
@@ -705,7 +704,7 @@ button:hover {
 
 
 
-/*Edit application*/
+/* EDIT APPLICATION PAGE */
 
 .edit-container {
   max-width: 900px;
@@ -741,7 +740,6 @@ button:hover {
   resize: vertical;
 }
 
-/* LABELS */
 .form-group {
   margin-bottom: 15px;
 }
@@ -753,7 +751,6 @@ button:hover {
   color: white;
 }
 
-/* BUTTONS */
 .edit-container button {
   margin-right: 10px;
   margin-top: 10px;
@@ -766,7 +763,6 @@ button:hover {
   color: white;
 }
 
-/* heading */
 .rem-head {
   text-align: left;
   margin-bottom: 8px;
@@ -778,7 +774,6 @@ button:hover {
   margin-bottom: 20px;
 }
 
-/* small compact card */
 .card {
   background: white;
   color:black;
@@ -789,7 +784,6 @@ button:hover {
   text-align: left;
 }
 
-/* text alignment inside card */
 .card h3 {
   margin: 0;
   text-align: left;
@@ -801,7 +795,6 @@ button:hover {
   text-align: left;
 }
 
-/* urgent highlight */
 .urgent {
   border-left: 4px solid #ef4444;
 }
@@ -814,7 +807,7 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/*PROFILE PAGE*/
+/* PROFILE PAGE */
 
 /* MAIN PROFILE CONTAINER */
 .profile {
@@ -887,15 +880,15 @@ button:hover {
 /* BUTTON */
 .profile button {
   margin-top: 20px;
-  padding: 8px 14px;   /* smaller size */
+  padding: 8px 14px;   
   border: none;
   border-radius: 10px;
   background: linear-gradient(135deg, #2563eb, #06b6d4);
-  font-size: 14px;     /* reduced */
+  font-size: 14px;     
   cursor: pointer;
   transition: 0.3s ease;
-  width: fit-content;  /* makes button compact */
-  align-self: flex-start; /* keeps it left aligned */
+  width: fit-content;  
+  align-self: flex-start; 
 }
 
 .profile button:hover {
@@ -979,6 +972,7 @@ button:hover {
 .log-container form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
 .log-container label {
@@ -1004,6 +998,27 @@ button:hover {
   border-radius: 8px;
   font-size: 15px;
   cursor: pointer;
+}
+
+.password-box {
+  position: relative;
+  width: 100%;
+}
+
+.password-box input {
+  width:100%;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.eye-icon{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 /* TABLET */
@@ -1138,3 +1153,4 @@ button:hover {
     width: 40%;
   }
 }
+

@@ -44,7 +44,7 @@ function AnalyticsChart({ analytics }) {
   analytics.interview,
   analytics.selected,
   analytics.rejected
-];
+  ];
   const total = values.reduce((sum, val) => sum + val, 0);
   if (total === 0) {
     return (

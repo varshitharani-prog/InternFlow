@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 function Register() {
   const [form, setForm] = useState({
@@ -7,6 +8,8 @@ function Register() {
     password: "",
     confirmPassword: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -82,8 +85,9 @@ function Register() {
       {success && <div className="success-msg">{success}</div>}
 
       <form onSubmit={handleSubmit}>
-        <label>Name</label>
+        <label htmlFor="name">Name</label>
         <input
+          id="name"
           type="text"
           name="name"
           placeholder="Enter name"
@@ -91,8 +95,9 @@ function Register() {
           onChange={handleChange}
         />
 
-        <label>Email</label>
+        <label htmlFor="email">Email</label>
         <input
+          id="email"
           type="email"
           name="email"
           placeholder="Enter email"
@@ -100,23 +105,43 @@ function Register() {
           onChange={handleChange}
         />
 
-        <label>Password</label>
-        <input
-          type="password"
+        <label htmlFor="password">Password</label>
+        <div className="password-box">
+          <input
+          id="password"
+          type={showPassword ? "text" : "password"}
           name="password"
           placeholder="Enter password"
           value={form.password}
           onChange={handleChange}
-        />
+          />
 
-        <label>Confirm Password</label>
-        <input
-          type="password"
+          <span className="eye-icon"
+          onClick={() => setShowPassword(!showPassword)}
+          >
+          {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
+        </div>
+
+        <label htmlFor="confirmPassword">Confirm Password</label>
+        <div className="password-box">
+          <input
+          id="confirmPassword"
+          type={showConfirmPassword ? "text" : "password"}
           name="confirmPassword"
           placeholder="Confirm password"
           value={form.confirmPassword}
           onChange={handleChange}
         />
+
+          <span className="eye-icon"
+          onClick={() =>
+          setShowConfirmPassword(!showConfirmPassword)
+          }
+          >
+          {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
+        </div>
 
         <button type="submit">Register</button>
       </form>

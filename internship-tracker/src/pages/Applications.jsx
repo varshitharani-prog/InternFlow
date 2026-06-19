@@ -81,15 +81,15 @@ function Applications({
   return (
     <div className="app-container">
       <div className="applications-header">
-  <h1>Applications</h1>
+        <h1>Applications</h1>
 
-  <p>
-    Manage and track all your internship applications in one place.
-    Stay organized by monitoring application statuses, interview
-    schedules, assessments, and recruitment progress throughout your
-    internship journey.
-  </p>
-</div>
+        <p>
+          Manage and track all your internship applications in one place.
+          Stay organized by monitoring application statuses, interview
+          schedules, assessments, and recruitment progress throughout your
+          internship journey.
+        </p>
+      </div>
 
       <AddApplication
         applications={applications}
@@ -99,15 +99,15 @@ function Applications({
       <br />
       
       <div className="list-header">
-  <h2>Applications List</h2>
+        <h2>Applications List</h2>
 
-  <p>
-    View, search, filter, and update your internship applications.
-    Keep track of every opportunity and stay on top of upcoming
-    assessments and interviews.
-  </p>
-</div>
-<input
+        <p>
+          View, search, filter, and update your internship applications.
+          Keep track of every opportunity and stay on top of upcoming
+          assessments and interviews.
+        </p>
+      </div>
+      <input
         type="text"
         placeholder="Search company or role..."
         value={search}

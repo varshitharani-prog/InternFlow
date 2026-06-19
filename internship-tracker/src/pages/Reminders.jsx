@@ -3,11 +3,9 @@ function Reminders({ reminders }) {
     if (!dateTime) return "";
 
     const date = new Date(dateTime);
-
     const day = String(date.getDate()).padStart(2, "0");
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const year = date.getFullYear();
-
     const hours = String(date.getHours()).padStart(2, "0");
     const minutes = String(date.getMinutes()).padStart(2, "0");
 
@@ -37,7 +35,7 @@ function Reminders({ reminders }) {
         <p>No Reminders</p>
       ) : (
         reminders
-          .filter((r) => !isPast(r.dateTime))   // 🔥 removes old OA/interviews
+          .filter((r) => !isPast(r.dateTime))   
           .map((r, index) => (
             <div
               key={index}

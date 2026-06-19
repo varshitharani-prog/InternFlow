@@ -68,7 +68,7 @@ function Dashboard({ applications }) {
       monitor progress through every stage, and gain
       insights from your application journey.
     </p>
-  </div>
+    </div>
 
       <div className="stats-container">
 
@@ -115,39 +115,39 @@ function Dashboard({ applications }) {
       </div>
 
       {analytics && (
-    <div className="analytics-section">
-      <h2>Application Analytics</h2>
+      <div className="analytics-section">
+        <h2>Application Analytics</h2>
 
-      <p>
-        Visualize how your applications are distributed
-        across different stages of the recruitment process.
-      </p>
+        <p>
+          Visualize how your applications are distributed
+          across different stages of the recruitment process.
+        </p>
 
-      <AnalyticsChart analytics={analytics} />
-    </div>
-  )}
-
-    <div className="recent-applications">
-    <h2>Recent Applications</h2>
-
-    <p>
-      Your latest internship applications and their current status.
-    </p>
-
-    {applications.length === 0 ? (
-      <div style={{color:"white"}}>
-        <p>No applications found.</p>
-        <p>Start your journey by adding application.</p>
+        <AnalyticsChart analytics={analytics} />
       </div>
-) : (
-  applications.slice(-5).reverse().map((app) => (
-    <div className="recent-app-card" key={app._id}>
-      <strong>{app.company}</strong>
-      <span>{app.status}</span>
-    </div>
-  ))
-)}
-  </div>
+      )}
+
+      <div className="recent-applications">
+        <h2>Recent Applications</h2>
+
+        <p>
+          Your latest internship applications and their current status.
+        </p>
+
+        {applications.length === 0 ? (
+        <div style={{color:"white"}}>
+          <p>No applications found.</p>
+          <p>Start your journey by adding application.</p>
+        </div>
+        ) : (
+          applications.slice(-5).reverse().map((app) => (
+          <div className="recent-app-card" key={app._id}>
+            <strong>{app.company}</strong>
+            <span>{app.status}</span>
+          </div>
+          ))
+        )}
+      </div>
     </div>
   );
 }

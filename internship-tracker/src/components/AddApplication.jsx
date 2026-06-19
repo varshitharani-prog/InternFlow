@@ -63,8 +63,8 @@ function AddApplication({ setApplications }) {
   return (
     <div>
       <h2 style={{ color: "white" }}>
-  Add Application
-</h2>
+        Add Application
+      </h2>
       <input
         type="text"
         name="company"
@@ -80,11 +80,11 @@ function AddApplication({ setApplications }) {
         value={form.role}
         onChange={handleChange}
       />
-      <br></br>
+      <br/>
+
       <button className="add" onClick={handleAdd}>
         Add Application
       </button>
-
     </div>
   );
 }

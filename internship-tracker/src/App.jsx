@@ -12,9 +12,8 @@ import EditApplication from "./pages/EditApplication";
 import Reminders from "./pages/Reminders";
 import ProtectedRoute from "./components/ProtectedRoute";
 import {useState,useEffect} from "react"
-
-//import "./App.css";
 import "./index.css"
+
 function App() {
   const [applications,setApplications] = useState([]);
   const [loading,setLoading]=useState(true);

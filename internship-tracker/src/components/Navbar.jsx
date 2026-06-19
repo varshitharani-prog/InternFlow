@@ -20,12 +20,10 @@ function Navbar() {
     <>
       <nav className="navbar">
 
-        {/* LEFT - LOGO */}
         <div className="nav-left">
           <img src="/logo1.jpeg" alt="Logo" className="logo" />
         </div>
 
-        {/* CENTER - LINKS (DESKTOP) */}
         <div className="nav-center desktop">
           <Link className="nav-btn" to="/">Home</Link>
 
@@ -39,7 +37,6 @@ function Navbar() {
           )}
         </div>
 
-        {/* RIGHT - AUTH (DESKTOP) */}
         <div className="nav-right desktop">
           {!token ? (
             <>
@@ -53,16 +50,13 @@ function Navbar() {
           )}
         </div>
 
-        {/* HAMBURGER ICON (MOBILE) */}
         <div className="hamburger" onClick={() => setOpen(true)}>
           ☰
         </div>
       </nav>
 
-      {/* OVERLAY */}
       {open && <div className="overlay" onClick={closeMenu}></div>}
 
-      {/* SIDEBAR MENU */}
       <div className={`sidebar ${open ? "active" : ""}`}>
 
         <span className="close" onClick={closeMenu}>✖</span>

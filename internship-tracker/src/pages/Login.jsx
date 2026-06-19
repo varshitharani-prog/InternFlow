@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 function Login({setToken}) {
   const navigate = useNavigate();
-
+  const [showPassword, setShowPassword] = useState(false);
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -64,30 +64,35 @@ function Login({setToken}) {
       {error && <div className="error-msg">{error}</div>}
 
       <form onSubmit={handleSubmit}>
-        <label>Email</label>
-        <br />
+        <label htmlFor="email">Email</label>
         <input
+          id="email"
           type="email"
           name="email"
           placeholder="Enter email"
           value={form.email}
           onChange={handleChange}
         />
-
-        <br /><br />
-
-        <label>Password</label>
         <br />
-        <input
-          type="password"
+        <label htmlFor="password">Password</label>
+
+        <div className="password-box">
+          <input
+          id="password"
+          type={showPassword ? "text" : "password"}
           name="password"
           placeholder="Enter password"
           value={form.password}
           onChange={handleChange}
         />
 
+        <span className="eye-icon"
+        onClick={() => setShowPassword(!showPassword)}
+        >
+        {showPassword ? <FaEyeSlash /> : <FaEye />}
+        </span>
+        </div>
         <br /><br />
-
         <button type="submit">Login</button>
       </form>
     </div>

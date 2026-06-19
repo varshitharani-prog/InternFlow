@@ -15,7 +15,6 @@ useEffect(() => {
   return (
     <div className="home">
 
-      {/* HERO SECTION */}
       <section className="hero">
         <div className="hero-left">
           <span className="badge">All-in-One Internship Tracker</span>
@@ -33,7 +32,6 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* FEATURES SECTION */}
       <section className="features">
         <h2>Why InternFlow?</h2>
 
@@ -65,7 +63,6 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
       <section className="how">
         <h2>How it works</h2>
 
