@@ -75,18 +75,6 @@ MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 ```
 
-## Screenshots
-
-(Add screenshots here)
-
-## Future Improvements
-
-* Email Reminders
-* Calendar View
-* Search by Company
-* Cloud Storage for Files
-* AI-based Suggestions
-
 ## Author
 
 Bathula Varshitha Rani 
