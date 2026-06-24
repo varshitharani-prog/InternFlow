@@ -89,4 +89,4 @@ JWT_SECRET=your_secret_key
 
 ## Author
 
-** Bathula Varshitha Rani **
+Bathula Varshitha Rani 
