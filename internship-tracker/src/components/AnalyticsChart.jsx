@@ -30,10 +30,10 @@ function AnalyticsChart({ analytics }) {
           analytics.rejected
         ],
          backgroundColor: [
-          "#F59E0B", // Orange - OA
-          "#8B5CF6", // Violet - Interview
-          "#10B981", // Green - Selected
-          "#EF4444"  // Red - Rejected
+          "#F59E0B", 
+          "#8B5CF6", 
+          "#10B981", 
+          "#EF4444"  
         ],
         borderWidth: 2
       }
@@ -64,3 +64,4 @@ function AnalyticsChart({ analytics }) {
 }
 
 export default AnalyticsChart;
+

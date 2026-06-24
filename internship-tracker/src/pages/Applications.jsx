@@ -16,18 +16,18 @@ function Applications({
   async function updateStatus(id, newStatus) {
     try{
       await fetch(
-  `http://localhost:5000/applications/${id}`,
-  {
-    method:"PUT",
-    headers:{
-      "Content-Type":"application/json",
-      Authorization: `Bearer ${localStorage.getItem("token")}`
-    },
-    body:JSON.stringify({
-      status:newStatus,
-    }),
-  }
-);
+      `http://localhost:5000/applications/${id}`,
+      {
+      method:"PUT",
+      headers:{
+        "Content-Type":"application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`
+      },
+      body:JSON.stringify({
+        status:newStatus,
+      }),
+      }
+      );
       setApplications(prev=>
         prev.map(app=>
           app._id===id?{...app,status:newStatus}:app
@@ -43,14 +43,14 @@ function Applications({
   async function deleteApplication(id) {
     try{
       await fetch(
-  `http://localhost:5000/applications/${id}`,
-  {
-    method:"DELETE",
-    headers:{
-      Authorization: `Bearer ${localStorage.getItem("token")}`
-    }
-  }
-);
+        `http://localhost:5000/applications/${id}`,
+        {
+        method:"DELETE",
+        headers:{
+          Authorization: `Bearer ${localStorage.getItem("token")}`
+        }
+        }
+      );
       setApplications(prev=> prev.filter(app=>app._id!==id));
     }
     catch(error){
@@ -64,9 +64,11 @@ function Applications({
     search===""||
     app.company.toLowerCase().includes(search.toLowerCase()) ||
     app.role.toLowerCase().includes(search.toLowerCase());
+    
     const matchFilter=filter==="All"||app.status===filter;
     return matchSearch&&matchFilter;
   });
+  
   let sortedApplications=[...filteredApplications];
   if(sortOrder==="newest"){
     sortedApplications.reverse();

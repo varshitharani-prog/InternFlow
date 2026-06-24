@@ -1,17 +1,16 @@
-/*import "./Home.css";*/
 import { useEffect,useRef } from "react";
 import { useLocation } from "react-router-dom";
 function Home() {
   const location = useLocation();
 
-const shown = useRef(false);
+  const shown = useRef(false);
 
-useEffect(() => {
-  if (!shown.current && location.state?.message) {
-    alert(location.state.message);
-    shown.current = true;
-  }
-}, []);
+  useEffect(() => {
+    if (!shown.current && location.state?.message) {
+      alert(location.state.message);
+      shown.current = true;
+    }
+  }, []);
   return (
     <div className="home">
 
