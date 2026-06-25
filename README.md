@@ -1,6 +1,7 @@
 <div align="center">
 
-<img src="./frontend/public/logop.jpeg" alt="Planify Logo" width="250"/>
+<img src="./internship-tracker/public/logo1.jpeg" alt="Planify Logo" width="250"/>
+</div>
 
 # InternFlow 
 
