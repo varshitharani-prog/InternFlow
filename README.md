@@ -1,4 +1,8 @@
-# InternFlow 🚀
+<div align="center">
+
+<img src="./frontend/public/logop.jpeg" alt="Planify Logo" width="250"/>
+
+# InternFlow 
 
 InternFlow is a full-stack internship application tracker that helps students organize and monitor their internship journey in one place. Users can add applications, update statuses, track interview schedules, manage profiles, and view analytics.
 
